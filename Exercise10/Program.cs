@@ -6,7 +6,7 @@ namespace Exercise10
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Отсортировать массив по убыванию одним из способов:  " +
+            Console.WriteLine("Отсортировать массив по убыванию одним из способов: " +
                 "пузырьком(Bubble), выбором (Select) или вставками (Insert))");
             Random rnd = new Random();
             Console.WriteLine("Введите размер массива");
