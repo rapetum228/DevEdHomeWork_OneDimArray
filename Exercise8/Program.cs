@@ -14,15 +14,12 @@ namespace Exercise8
             int lengthArr = Convert.ToInt32(Console.ReadLine());
             int[] arr = new int[lengthArr];
 
-            int[] newArr = new int[lengthArr];
-
             Console.WriteLine("\nМассив: ");
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = rnd.Next(-15, 15);
                 Console.Write($"{arr[i]}\t");
             }
-            ///////////////////////////////////////
             int unitOrNull = 0;
             if (arr.Length%2 == 0) 
                 unitOrNull = 0;
