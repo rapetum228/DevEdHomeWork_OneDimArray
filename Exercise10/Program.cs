@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Exercise9
+namespace Exercise10
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Отсортировать массив по возрастанию одним из способов:  " +
+            Console.WriteLine("Отсортировать массив по убыванию одним из способов:  " +
                 "пузырьком(Bubble), выбором (Select) или вставками (Insert))");
             Random rnd = new Random();
             Console.WriteLine("Введите размер массива");
@@ -21,29 +21,29 @@ namespace Exercise9
                 arr[i] = rnd.Next(-15, 15);
                 Console.Write($"{arr[i]}\t");
             }
-            Console.WriteLine("\nСортировка пузырьком:");
+            Console.WriteLine("\nСортировка выбором:");
 
-            int countExchange = 1;
-            while (countExchange != 0)
+            for (int j = 0; j < arr.Length; j++)
             {
-                countExchange = 0;
-                for (int j = 0; j < arr.Length - 1; j++)
+                int maxElementArr = -16;
+                int indexMax = 0;
+                int temp = arr[j];
+                for (int i = j; i < arr.Length; i++)
                 {
-                    int firstOfPair, secondOfPair;
-                    firstOfPair = arr[j];
-                    secondOfPair = arr[j + 1];
-
-                    if (secondOfPair < firstOfPair)
+                    if (maxElementArr < arr[i])
                     {
-                        arr[j] = secondOfPair;
-                        arr[j + 1] = firstOfPair;
-                        countExchange++;
+                        maxElementArr = arr[i];
+                        indexMax = i;
                     }
+
                 }
-                Console.WriteLine("Количество обменов: " + countExchange + " из " + arr.Length);
+                arr[j] = maxElementArr;
+                arr[indexMax] = temp;
+
             }
-            
-            for (int i = 0; i < arr.Length; i++)
+
+
+                for (int i = 0; i < arr.Length; i++)
             {
                 //arr[i] = rnd.Next(-15, 15);
                 Console.Write($"{arr[i]}\t");
