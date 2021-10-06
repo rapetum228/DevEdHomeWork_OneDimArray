@@ -22,7 +22,7 @@ namespace Exercise10
                 Console.Write($"{arr[i]}\t");
             }
             Console.WriteLine("\nСортировка выбором:");
-
+            //комннт для гита
             for (int j = 0; j < arr.Length; j++)
             {
                 int maxElementArr = arr[j];
