@@ -13,8 +13,6 @@ namespace Exercise10
             int lengthArr = Convert.ToInt32(Console.ReadLine());
             int[] arr = new int[lengthArr];
 
-            //int[] arr = { 1, 2, -4, 0, 6, 3};
-
             Console.WriteLine("\nМассив: ");
             for (int i = 0; i < arr.Length; i++)
             {
@@ -22,7 +20,7 @@ namespace Exercise10
                 Console.Write($"{arr[i]}\t");
             }
             Console.WriteLine("\nСортировка выбором:");
-            //комннт для гита
+            
             for (int j = 0; j < arr.Length; j++)
             {
                 int maxElementArr = arr[j];
@@ -42,10 +40,8 @@ namespace Exercise10
 
             }
 
-
                 for (int i = 0; i < arr.Length; i++)
             {
-                //arr[i] = rnd.Next(-15, 15);
                 Console.Write($"{arr[i]}\t");
             }
         }
