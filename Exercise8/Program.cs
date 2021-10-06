@@ -20,18 +20,12 @@ namespace Exercise8
                 arr[i] = rnd.Next(-15, 15);
                 Console.Write($"{arr[i]}\t");
             }
-            int unitOrNull = 0;
-            if (arr.Length%2 == 0) 
-                unitOrNull = 0;
-            
-            else
-                unitOrNull = 1;
 
             for (int i = 0; i < arr.Length / 2; i++)
             {
                 int temp = arr[i];
-                arr[i] = arr[arr.Length / 2 + i + unitOrNull];
-                arr[arr.Length / 2 + i + unitOrNull] = temp;
+                arr[i] = arr[arr.Length - arr.Length / 2 + i ];
+                arr[arr.Length - arr.Length / 2 + i ] = temp;
             }
 
             Console.WriteLine("\nНовый массив: ");
