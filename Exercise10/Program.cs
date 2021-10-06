@@ -25,8 +25,8 @@ namespace Exercise10
 
             for (int j = 0; j < arr.Length; j++)
             {
-                int maxElementArr = -16;
-                int indexMax = 0;
+                int maxElementArr = arr[j];
+                int indexMax = j;
                 int temp = arr[j];
                 for (int i = j; i < arr.Length; i++)
                 {
