@@ -29,21 +29,36 @@ namespace Exercise10
              */
             for (int j = 0; j < arr.Length; j++)
             {
+                int minElementArr = arr[arr.Length-1 - j];
                 int maxElementArr = arr[j];
                 int indexMax = j;
-                int temp = arr[j];
-                for (int i = j; i < arr.Length; i++)
+                int indexMin = arr.Length - 1 - j;
+                int tempMax = arr[j];
+                int tempMin = arr[arr.Length - 1 - j];
+                int tillMax = j;
+                int fromMin = arr.Length-1-j;
+                while (fromMin >= j && tillMax < arr.Length-j)
                 {
-                    if (maxElementArr < arr[i])
+                    
+                    if(maxElementArr <= arr[tillMax])
                     {
-                        maxElementArr = arr[i];
-                        indexMax = i;
+                        maxElementArr = arr[tillMax];
+                        indexMax = tillMax;
                     }
-
+                    if (minElementArr >= arr[fromMin])
+                    {
+                        minElementArr = arr[fromMin];
+                        indexMin = fromMin;
+                    }
+                    tillMax++;
+                    fromMin--;
                 }
+                
                 arr[j] = maxElementArr;
-                arr[indexMax] = temp;
-
+                arr[arr.Length - 1 - j] = minElementArr;
+                arr[indexMax] = tempMax;
+                arr[indexMin] = tempMin;
+                
             }
 
                 for (int i = 0; i < arr.Length; i++)
